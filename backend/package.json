@@ -2,9 +2,16 @@
   "name": "gifty-backend",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "Serhii Shramko",
+    "email": "shramko.dev@gmail.com",
+    "url": "https://shramko.dev/"
+  },
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "16"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
