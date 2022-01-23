@@ -1,8 +1,12 @@
 ## How to use
 
-1. Run docker on local machine
-2. Run in root dir command:
-
 ```bash
-docker-compose up -d
+cd backend
+npm run start:dev
+cd frontend
+npm run dev
 ```
+
+Backend starts on 3000 port
+
+Frontend starts on 3001 port
