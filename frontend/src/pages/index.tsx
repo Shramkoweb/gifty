@@ -1,10 +1,18 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 
-import Counter from '../features/counter/Counter'
-import styles from '../styles/Home.module.css'
+import Counter from "../features/counter/Counter";
+import styles from "../styles/Home.module.css";
 
-const IndexPage: NextPage = () => {
+interface IndexPageProps {
+  articles: Array<{
+    id: number;
+    title: string;
+  }>;
+  children?: JSX.Element | JSX.Element[];
+}
+
+const IndexPage: NextPage = (props: IndexPageProps) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +20,11 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
+        <ul>
+          {props.articles.map((article) => (
+            <li key={article.id}>{article.title}</li>
+          ))}
+        </ul>
         <img src="/logo.svg" className={styles.logo} alt="logo" />
         <Counter />
         <p>
@@ -57,7 +70,19 @@ const IndexPage: NextPage = () => {
         </span>
       </header>
     </div>
-  )
+  );
+};
+
+export async function getStaticProps() {
+  // TODO add SWR or axios
+  const response = await fetch("http://localhost:3000");
+  const articles = await response.json();
+
+  console.log(articles);
+
+  return {
+    props: { articles },
+  };
 }
 
-export default IndexPage
+export default IndexPage;
