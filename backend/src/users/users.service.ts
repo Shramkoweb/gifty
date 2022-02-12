@@ -18,7 +18,6 @@ export class UsersService {
   }
 
   findOne(id: string): User {
-    console.log(id);
     const user = this.users.find((user) => user.id === parseInt(id, 10));
 
     if (!user) {
