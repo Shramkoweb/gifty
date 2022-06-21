@@ -1,3 +1,6 @@
+<a href="https://codeclimate.com/github/Shramkoweb/gifty/maintainability"><img src="https://api.codeclimate.com/v1/badges/5fd29b8905e9658564a3/maintainability" /></a>
+<a href="https://codeclimate.com/github/Shramkoweb/gifty/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5fd29b8905e9658564a3/test_coverage" /></a>
+
 ## How to use
 
 ```bash
