@@ -16,7 +16,7 @@
     "node": "16"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.2",
+    "@reduxjs/toolkit": "^1.8.3",
     "next": "^12.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
